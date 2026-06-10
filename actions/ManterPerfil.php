@@ -6,8 +6,8 @@ require_once('dto/Perfil.php');
 
 class ManterPerfil extends Model {
 
-    function ManterPerfil() { //metodo construtor
-        parent::model();
+    public function __construct() { //metodo construtor
+        parent::__construct();
     }
 
     function listar() {

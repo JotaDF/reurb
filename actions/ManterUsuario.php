@@ -7,8 +7,8 @@ require_once('EnviarEmail.php');
 
 class ManterUsuario extends Model {
 
-    function ManterUsuario() { //metodo construtor
-        parent::model();
+    public function __construct() { //metodo construtor
+        parent::__construct();
     }
 
     function listar() {

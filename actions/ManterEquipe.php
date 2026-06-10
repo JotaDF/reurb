@@ -6,8 +6,8 @@ require_once('dto/Equipe.php');
 
 class ManterEquipe extends Model {
 
-    function ManterEquipe() { //metodo construtor
-        parent::model();
+    public function __construct() { //metodo construtor
+        parent::__construct();
     }
 
     function listar() {
