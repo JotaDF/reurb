@@ -33,11 +33,11 @@
         <div class="container justify-content-center">
 
             <!-- Exibe form de login -->
-            <div class="card mt-5 mb-3 border-dark" style="max-width: 500px;">
-                <div class="card-body bg-primary bg-dark" style="min-height: 5.0rem;">
+            <div class="card mt-5 mb-3 border-primary" style="max-width: 500px;">
+                <div class="card-body bg-gradient-primary" style="min-height: 5.0rem;">
                     <div class="row">
                         <div class="col c2 ml-2">                     
-                            <div class="h2 mb-0 text-white font-weight-bold">Acesso ao Gerente</div>
+                            <div class="h2 mb-0 text-white font-weight-bold">Acesso ao REURB</div>
                         </div>
                         <div class="col-auto">
                             <i class="fa fa-lock fa-3x text-white"></i>
@@ -71,7 +71,7 @@
                         <div class="row">                           
                             <div class="my-3 col c0 ml-2">   
                                 <div class="col c1">
-                                    <button type="submit" class="btn btn-dark btn-block">
+                                    <button type="submit" class="btn btn-primary btn-block">
                                         Entrar
                                     </button>
                                     <div class="col">
