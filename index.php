@@ -52,7 +52,6 @@ and open the template in the editor.
                 <!-- Main Content -->
                 <div id="content">
                     <?php include './top_bar.php'; ?>
-                    <?php include './home.php'; ?>
                 </div>
                 <!-- End of Main Content -->
 
