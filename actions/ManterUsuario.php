@@ -12,7 +12,7 @@ class ManterUsuario extends Model {
     }
 
     function listar() {
-        $sql = "select u.id,u.nome,u.cpf,u.senha,u.email,u.ativo,u.id_equipe,u.id_perfil,(select count(*) from tarefa as t where t.id_criador=u.id OR t.id_responsavel=u.id) as dep FROM usuario as u order by u.nome";
+        $sql = "select u.id,u.nome,u.cpf,u.senha,u.email,u.ativo,u.id_equipe,u.id_perfil FROM usuario as u order by u.nome";
         $resultado = $this->db->Execute($sql);
         $array_dados = array();
         while ($registro = $resultado->fetchRow()) {
