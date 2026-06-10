@@ -1,12 +1,12 @@
 <!-- Sidebar -->
-<ul class="navbar-nav bg-dark sidebar sidebar-dark accordion " id="accordionSidebar">
+<ul class="navbar-nav bg-primary sidebar sidebar-dark accordion " id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon">
-            <i class="fa fa-cogs"></i>
+            <i class="fa fa-desktop"></i>
         </div>
-        <div class="sidebar-brand-text mx-1">GERENTE</div>
+        <div class="sidebar-brand-text mx-1">REURB</div>
     </a>
 
     <?php
