@@ -7,7 +7,7 @@ require('adodb/adodb.inc.php'); //biblioteca necessaria para trabalhar com adodb
 
 Class Model{
 	protected $db;
-	function model(){
+	public function __construct() {
 		$tipo_banco    = "mysqli";
 		/** local */
 		//$servidor      = "localhost";

@@ -4,8 +4,8 @@ include_once('Model.php');
 
 class Login extends Model {
 
-    function Login() {//metodo construtor
-        parent::model();
+    public function __construct() {
+        parent::__construct();
     }
 
     function logar($cpf, $senha) {
