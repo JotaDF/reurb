@@ -16,9 +16,9 @@ class Login extends Model {
             if (!strcmp($registro["senha"], $senha)) {
                 $dados = new Usuario();
                 $dados->id          = $registro["id"];
-                $dados->nome        = utf8_encode($registro["nome"]);
-                $dados->cpf         = utf8_encode($registro["cpf"]);
-                $dados->senha         = utf8_encode($registro["senha"]);
+                $dados->nome        = $registro["nome"];
+                $dados->cpf         = $registro["cpf"];
+                $dados->senha       = $registro["senha"];
                 $dados->ativo       = $registro["ativo"];
                 $dados->equipe      = $registro["id_equipe"];
                 $dados->perfil      = $registro["id_perfil"];
