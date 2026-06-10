@@ -9,7 +9,7 @@ class Login extends Model {
     }
 
     function logar($cpf, $senha) {
-        $sql = "SELECT id, nome, cpf, senha, id_perfil, id_equipe FROM usuario   WHERE cpf='" . $cpf . "' AND ativo=1";
+        $sql = "SELECT id, nome, cpf, senha, id_perfil, id_equipe, ativo FROM usuario   WHERE cpf='" . $cpf . "' AND ativo=1";
         //echo 'SQL:'.$sql;
         $resultado = $this->db->Execute($sql);
         if ($registro = $resultado->fetchRow()) {
