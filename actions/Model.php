@@ -15,10 +15,10 @@ Class Model{
 		//$senha         = "";
 		//$db            = "gerente";
                 /** web */
-		$servidor      = "187.45.196.179";
-		$usuario       = "gerente_db";
-		$senha         = "gerente$2020";
-		$db            = "gerente_db";
+		$servidor      = "db";
+		$usuario       = "reurb";
+		$senha         = "reurb#2020";
+		$db            = "reurb";
 		
         $this->db = $banco = NewADOConnection($tipo_banco);
 		$this->db->dialect = 3;
