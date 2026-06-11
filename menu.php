@@ -60,14 +60,14 @@
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="form_selagem.php">
-            <i class="fa fa-user"></i>
+            <i class="fa fa-id-card"></i>
             <span>Selagem</span>
         </a>
     </li>
             <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="form_socio_juridico.php">
-            <i class="fa fa-user"></i>
+            <i class="fa fa-id-card"></i>
             <span>Sócio Jurídico</span>
         </a>
     </li>
