@@ -54,6 +54,23 @@
     ?>
     <!-- Divider -->
     <hr class="sidebar-divider">  
+    <div class="sidebar-heading">
+        Formulários de coleta
+    </div>
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="form_selagem.php">
+            <i class="fa fa-user"></i>
+            <span>Selagem</span>
+        </a>
+    </li>
+            <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="form_socio_juridico.php">
+            <i class="fa fa-user"></i>
+            <span>Sócio Jurídico</span>
+        </a>
+    </li>
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
