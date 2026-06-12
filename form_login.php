@@ -80,17 +80,6 @@
                             </div>
                         </div>
                     </form>
-                     <div class="row">                           
-                            <div class="my-3 col c0 ml-2">   
-                                <div class="col c1">
-                                    <a href="form_esqueci_senha.php" class="btn btn-warning btn-block text-dark">
-                                        Esqueci minha senha!
-                                    </a>
-                                    <div class="col">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                 </div>
             </div>
             <!-- fim da exibição -->               

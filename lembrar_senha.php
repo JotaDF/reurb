@@ -21,7 +21,7 @@ if($usuario->ativo){
     $assunto = "Recuperação de senha";
     $mensagem = "Olá <strong>" . $usuario->nome ."</strong>,<br/><br/>";
     $mensagem .= "Sua senha para acesso ao Gerente: <strong>" . $usuario->senha ."</strong><br/><br/>";
-    $mensagem .= "<a href='http://www.jotadf.com.br/gerente'>Acesse sua conta</a>";
+    $mensagem .= "<a href='http://reurb.vps-kinghost.net/'>Acesse sua conta</a>";
     $mail->enviarPHPMailer($assunto, $destinatario, $mensagem);
     header('Location: form_esqueci_senha.php?msg=1');
 } else {

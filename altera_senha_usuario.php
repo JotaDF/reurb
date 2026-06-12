@@ -70,9 +70,9 @@ and open the template in the editor.
 
                     <div class="container-fluid">
 
-                        <div class="card mb-4 border-info" id="form_usuario" style="max-width:900px">
+                        <div class="card mb-4 border-primary" id="form_usuario" style="max-width:900px">
                             <!-- Card Header - Accordion -->
-                            <div class="card-header py-2 card-body bg-info align-middle" style="min-height: 3.0rem;">               
+                            <div class="card-header py-2 card-body bg-primary align-middle" style="min-height: 3.0rem;">               
                                 <span class="h5 m-0 font-weight text-white">Alteração de senha do usuário: <?= $usuario_logado->nome ?></span>
                             </div>  
                             <!-- Card Content - Collapse -->
