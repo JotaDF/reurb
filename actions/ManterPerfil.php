@@ -21,8 +21,8 @@ class ManterPerfil extends Model {
                 $dados->excluir = false;
             }
             $dados->id          = $registro["id"];
-            $dados->perfil = utf8_encode($registro["perfil"]);
-            $dados->descricao = utf8_encode($registro["descricao"]);
+            $dados->perfil = $registro["perfil"];
+            $dados->descricao = $registro["descricao"];
             $array_dados[] = $dados;
         }
         return $array_dados;
@@ -34,14 +34,14 @@ class ManterPerfil extends Model {
         $dados = new Perfil();
         while ($registro = $resultado->fetchRow()) {
             $dados->id          = $registro["id"];
-            $dados->perfil = utf8_encode($registro["perfil"]);
-            $dados->descricao = utf8_encode($registro["descricao"]);
+            $dados->perfil = $registro["perfil"];
+            $dados->descricao = $registro["descricao"];
         }
         return $dados;
     }
     function salvar(Perfil $dados) {
-        $dados->perfil = utf8_decode($dados->perfil);
-        $dados->descricao = utf8_decode($dados->descricao);
+        $dados->perfil = $dados->perfil;
+        $dados->descricao = $dados->descricao;
         $sql = "insert into perfil (perfil,descricao) values ('" . $dados->perfil . "','" . $dados->descricao . "')";
         if ($dados->id > 0) {
             $sql = "update perfil set perfil='" . $dados->perfil . "',descricao='" . $dados->descricao . "' where id=$dados->id";

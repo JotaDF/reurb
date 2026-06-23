@@ -1,6 +1,7 @@
 <?php
 require_once('./verifica_login.php');
 ?> 
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -40,18 +41,19 @@ and open the template in the editor.
          
 
             $(document).ready(function () {
-                $('#equipes').DataTable();
+                $('#perfis').DataTable();
+                carregaPerfilsPai(0, 0);
             });
             function excluir(id, id_moodle, nome) {
-                $('#delete').attr('href', 'del_equipe.php?id=' + id);
+                $('#delete').attr('href', 'del_perfil.php?id=' + id);
                 $('#nome_excluir').text(nome);
                 $('#confirm').modal({show: true});              
             }
-            function alterar(id, equipe, descricao) {
+            function alterar(id, perfil, descricao) {
                 $('#id').val(id);
-                $('#equipe').val(equipe);
+                $('#perfil').val(perfil);
                 $('#descricao').val(descricao);
-                $('#form_equipe').collapse("show");
+                $('#form_perfil').collapse("show");
                 $('#btn_cadastrar').hide();
             }
 
@@ -80,37 +82,54 @@ and open the template in the editor.
                     <?php include './top_bar.php'; ?>
 
                     <div class="container-fluid">
-                        <?php include './form_equipe.php'; ?>
+                        
                         <!-- Project Card Example -->
                         <div class="card mb-4 border-primary" style="max-width:900px">
                             <div class="row ml-0 card-header py-2 bg-gradient-primary" style="width:100%">
                                 <div class="col-sm ml-0" style="max-width:50px;">
-                                    <i class="fas fa-users fa-2x text-white"></i> 
+                                    <i class="fa fa-id-card fa-2x text-white"></i> 
                                 </div>
                                 <div class="col mb-0">
-                                    <span style="align:left;" class="h5 m-0 font-weight text-white">Equipes</span>
+                                    <span style="align:left;" class="h6 m-0 font-weight text-white">Importar dados</span>
                                 </div>
-                                <div class="col text-right" style="max-width:20%">
-                                    <button id="btn_cadastrar" class="btn btn-outline-light btn-sm" type="button" data-toggle="collapse" data-target="#form_equipe" aria-expanded="false" aria-controls="form_equipe">
-                                        <i class="fa fa-plus-circle text-white" aria-hidden="true"></i>
-                                    </button>
-                                </div>
-                            </div>                            
-
+                            </div>
                             <div class="card-body">
-                                <table id="equipes" class="table-sm table-striped table-bordered dt-responsive nowrap" style="width:100%">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Equipe</th>
-                                            <th scope="col">Descrição</th>
-                                            <th scope="col" style="width:30px;">Opções</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php include './get_equipe.php'; ?>
-                                    </tbody>
-                                </table>
+                                <form action="processar_upload.php" method="POST" enctype="multipart/form-data">
+                                    <div class="container">
+                                        <div class="card-body ">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="arquivo_csv_selagem" class="form-label">Anexar Arquivo - Ficha de Selagem de Lote (.csv)</label>
+                                                    <input class="form-control-file" type="file" name="arquivo_csv_selagem" id="arquivo_csv_selagem" required>
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="arquivo_csv_domicilios" class="form-label">Anexar Arquivo - Domicílios (.csv)</label>
+                                                    <input class="form-control-file" type="file" name="arquivo_csv_domicilios" id="arquivo_csv_domicilios" required>
+                                                </div>
+                                            </div>  
+                                            <br/>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="arquivo_csv_socio_juridico" class="form-label">Anexar Arquivo - Sócio Jurídico (.csv)</label>
+                                                    <input class="form-control-file" type="file" name="arquivo_csv_socio_juridico" id="arquivo_csv_socio_juridico">
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="arquivo_csv_caracterizacao" class="form-label">Anexar Arquivo - Caracterização (.csv)</label>
+                                                    <input class="form-control-file" type="file" name="arquivo_csv_caracterizacao" id="arquivo_csv_caracterizacao">
+                                                </div>
+                                            </div>                                          
+                                            <div class="mb-3"><br/>
+                                                <button type="submit" class="btn btn-primary">Realizar Importação</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -128,29 +147,6 @@ and open the template in the editor.
         <a class="scroll-to-top rounded" href="#page-top">
             <i class="fas fa-angle-up"></i>
         </a>
-        <!-- Modal excluir -->
-        <div class="modal fade" id="confirm" role="dialog">
-            <div class="modal-dialog modal-sm">
-
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Confirmação</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Deseja excluir <strong>"<span id="nome_excluir"></span>"</strong>?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#" type="button" class="btn btn-danger" id="delete">Excluir</a>
-                        <button type="button" data-dismiss="modal" class="btn btn-secondary">Cancelar</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
     </body>
 
 </html>

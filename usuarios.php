@@ -23,6 +23,7 @@ and open the template in the editor.
 
         <!-- Custom styles for this template-->
         <link href="css/sb-admin-2.min.css" rel="stylesheet">
+        <link href="css/estilos.css" rel="stylesheet">
         <link rel="shortcut icon" href="favicon.ico" />
         <!------ Include the above in your HEAD tag ---------->
 

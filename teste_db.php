@@ -1,7 +1,6 @@
 <?php
 
 echo "<h2>Teste de Conexão com Bancos de Dados</h2>";
-
 /**
  * MYSQL
  */

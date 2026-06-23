@@ -7,7 +7,7 @@ class EnviarEmail {
 
     function enviar($assunto, $destinatario, $mensagem) {
         //-------------------------------------------------------------------------------------------
-        $emailsender = 'nao_responda@jotadf.com.br'; // Substitua essa linha pelo seu e-mail@seudominio
+        $emailsender = 'j.wilson.df@gmail.com'; // Substitua essa linha pelo seu e-mail@seudominio
 //        $nomeremetente = 'Gerente'; //nome do remetente
 //        $emailremetente = 'nao_responda@jotadf.com.br'; //email do remetente
         $emaildestinatario = $destinatario; //email destinatario
@@ -53,9 +53,9 @@ class EnviarEmail {
         $mail->SMTPAuth = true;
 
         // Usuário da conta
-        $mail->Username = 'gerente@jotadf.com.br'; //'jotakakashidf@gmail.com';
+        $mail->Username = 'j.wilson.df@gmail.com'; //'jotakakashidf@gmail.com';
         // Senha da conta
-        $mail->Password = 'Lord$wil2020';
+        $mail->Password = 'Lord$wil4040';
 
         // Tipo de encriptação que será usado na conexão SMTP
         $mail->SMTPSecure = 'ssl';
@@ -67,11 +67,11 @@ class EnviarEmail {
         $mail->IsHTML(true);
 
         // Email do Remetente
-        $mail->From = 'gerente@jotadf.com.br';
+        $mail->From = 'j.wilson.df@gmail.com';
 
         // Nome do Remetente
         $mail->FromName = 'Gerente';
-        $mail->addReplyTo('no-replay@jotadf.com.br');
+        $mail->addReplyTo('j.wilson.df@gmail.com');
 
         // Endereço do e-mail do destinatário
         $mail->addAddress($destinatario);

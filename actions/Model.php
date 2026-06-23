@@ -15,7 +15,7 @@ Class Model{
 		//$senha         = "";
 		//$db            = "gerente";
                 /** web */
-		$servidor      = "db";
+		$servidor      = "mysql";
 		$usuario       = "reurb";
 		$senha         = "reurb#2020";
 		$db            = "reurb";

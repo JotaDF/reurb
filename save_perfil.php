@@ -1,4 +1,6 @@
 <?php
+//ini_set('display_errors', 1);
+//error_reporting(E_ALL);
 
 require_once('./actions/ManterPerfil.php');
 require_once('./dto/Perfil.php');

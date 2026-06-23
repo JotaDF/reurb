@@ -59,16 +59,16 @@
     </div>
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="form_selagem.php">
+        <a class="nav-link collapsed" href="importa_dados.php">
             <i class="fa fa-id-card"></i>
-            <span>Selagem</span>
+            <span>Importar Dados</span>
         </a>
     </li>
             <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="form_socio_juridico.php">
+        <a class="nav-link collapsed" href="gerenciar_arquivos_importacao.php">
             <i class="fa fa-id-card"></i>
-            <span>Sócio Jurídico</span>
+            <span>Gerenciar Imagens</span>
         </a>
     </li>
     <!-- Sidebar Toggler (Sidebar) -->
