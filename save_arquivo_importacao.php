@@ -5,7 +5,7 @@ $pasta = isset($_REQUEST['pasta']) ? $_REQUEST['pasta'] : "";
 //echo "Chegou!!";
 
 if(!empty($_FILES['file'])){
-    $caminho = "arquivos/" . $pasta . "/";
+    $caminho = "./arquivos/" . $pasta . "/";
     echo $caminho;
     $arquivo = basename($_FILES['file']['name']);
     $targetFilePath = $caminho . $arquivo;

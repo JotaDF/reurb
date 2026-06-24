@@ -157,7 +157,7 @@ and open the template in the editor.
                         <!-- Project Card Example -->
                         <?php
 
-                        $uploadDir = 'arquivos/';
+                        $uploadDir = './arquivos/';
                         $uploadDir .= $pasta_ativa;
                         $uploadDir .= '/';
                         ?>
