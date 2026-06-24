@@ -10,7 +10,7 @@
     </a>
 
     <?php
-    if ($usuario_logado->perfil <= 2) {
+    if ($usuario_logado->perfil <= 1) {
         ?>
         <!-- Divider -->
         <hr class="sidebar-divider my-0">

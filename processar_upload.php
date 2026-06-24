@@ -39,7 +39,7 @@ if (!isset($_FILES['arquivo_csv_selagem']) || $_FILES['arquivo_csv_selagem']['er
     exit;
 } else {
     $caminhoTemporario_selagem = $_FILES['arquivo_csv_selagem']['tmp_name'];
-    echo "<br/>".$caminhoTemporario_selagem."<br/>"; // Separador visual entre as importações
+    //echo "<br/>".$caminhoTemporario_selagem."<br/>"; // Separador visual entre as importações
     importarSelagem($caminhoTemporario_selagem, $pdo);
     echo "<br/><hr><br/>"; // Separador visual entre as importações
 }
@@ -50,7 +50,7 @@ if (!isset($_FILES['arquivo_csv_domicilios']) || $_FILES['arquivo_csv_domicilios
     exit;
 } else {
     $caminhoTemporario_domicilios = $_FILES['arquivo_csv_domicilios']['tmp_name'];
-    echo "<br/>".$caminhoTemporario_domicilios."<br/>"; // Separador visual entre as importações
+    //echo "<br/>".$caminhoTemporario_domicilios."<br/>"; // Separador visual entre as importações
     importarDomicilios($caminhoTemporario_domicilios, $pdo);
     echo "<br/><hr><br/>"; // Separador visual entre as importações
 }
@@ -60,7 +60,7 @@ if (!isset($_FILES['arquivo_csv_socio_juridico']) || $_FILES['arquivo_csv_socio_
     responderJSON(false, "Falha no envio do arquivo. Verifique o tamanho limite do PHP.");
 } else {
     $caminhoTemporario_socio_juridico = $_FILES['arquivo_csv_socio_juridico']['tmp_name'];
-    echo "<br/>".$caminhoTemporario_socio_juridico."<br/>"; // Separador visual entre as importações
+    //echo "<br/>".$caminhoTemporario_socio_juridico."<br/>"; // Separador visual entre as importações
     importarSociojuridico($caminhoTemporario_socio_juridico, $pdo);
     echo "<br/><hr><br/>"; // Separador visual entre as importações
 }
@@ -70,7 +70,7 @@ if (!isset($_FILES['arquivo_csv_caracterizacao']) || $_FILES['arquivo_csv_caract
     responderJSON(false, "Falha no envio do arquivo. Verifique o tamanho limite do PHP.");
 } else {
     $caminhoTemporario_caracterizacao = $_FILES['arquivo_csv_caracterizacao']['tmp_name'];
-    echo "<br/>".$caminhoTemporario_caracterizacao."<br/>"; // Separador visual entre as importações
+    //echo "<br/>".$caminhoTemporario_caracterizacao."<br/>"; // Separador visual entre as importações
     importarCaracterizacao($caminhoTemporario_caracterizacao, $pdo);
     echo "<br/><hr><br/>"; // Separador visual entre as importações
 }
@@ -152,9 +152,11 @@ function importarSelagem($arquivo, $pdo) {
             $linhas++;
         }
         fclose($handle_selagem);
-        responderJSON(true, "Sucesso! Foram importados/atualizados <strong>{$linhas}</strong> registros de Selagem.");
+        //responderJSON(true, "Sucesso! Foram importados/atualizados <strong>{$linhas}</strong> registros de Selagem.");
+        echo "Sucesso! Foram importados/atualizados <strong>{$linhas}</strong> registros de Selagem.";
     }
-    responderJSON(false, "Não foi possível abrir o arquivo enviado.");
+    //responderJSON(false, "Não foi possível abrir o arquivo enviado.");
+    echo "Não foi possível abrir o arquivo enviado.";
 }
 
 function importarDomicilios($arquivo, $pdo) {
@@ -260,9 +262,11 @@ function importarDomicilios($arquivo, $pdo) {
             $linhas++;
         }
         fclose($handle_domicilios);
-        responderJSON(true, "Sucesso! Foram importados/atualizados <strong>{$linhas}</strong> Domicílios vinculados.");
+        //responderJSON(true, "Sucesso! Foram importados/atualizados <strong>{$linhas}</strong> Domicílios vinculados.");
+        echo "Sucesso! Foram importados/atualizados <strong>{$linhas}</strong> Domicílios vinculados.";
     }
-    responderJSON(false, "Não foi possível abrir o arquivo enviado.");
+    //responderJSON(false, "Não foi possível abrir o arquivo enviado.");
+    echo "Não foi possível abrir o arquivo enviado.";
 }
 
 function importarCaracterizacao($arquivo, $pdo) {
@@ -471,7 +475,8 @@ function importarCaracterizacao($arquivo, $pdo) {
             $linhas++;
         }
         fclose($handle_caracterizacao);
-        responderJSON(true, "Sucesso! Caracterização Complementar de {$linhas} imóveis adicionada.");
+        //responderJSON(true, "Sucesso! Caracterização Complementar de {$linhas} imóveis adicionada.");
+        echo "Sucesso! Caracterização Complementar de {$linhas} imóveis adicionada.";
     }
     responderJSON(false, "Não foi possível abrir o arquivo enviado.");
 }
@@ -634,9 +639,11 @@ function importarSociojuridico($arquivo, $pdo) {
             $linhas++;
         }
         fclose($handle_joridico);
-        responderJSON(true, "Sucesso! Cadastro Sociojurídico de {$linhas} famílias importado.");
+        //responderJSON(true, "Sucesso! Cadastro Sociojurídico de {$linhas} famílias importado.");
+        echo "Sucesso! Cadastro Sociojurídico de {$linhas} famílias importado.";
     }
-    responderJSON(false, "Não foi possível abrir o arquivo enviado.");
+    //responderJSON(false, "Não foi possível abrir o arquivo enviado.");
+    echo "Não foi possível abrir o arquivo enviado.";
 }
 
 // Helper para padronizar o retorno da API para a interface do usuário
