@@ -105,9 +105,9 @@ function importarSelagem($arquivo, $pdo) {
         $stmt = $pdo->prepare($sql);
         $linhas = 0;
         while (($data = fgetcsv($handle_selagem, 4000, ";", '"', "\\")) !== FALSE) {
-            for ($i = 0; $i < count($data); $i++) {
-                echo "[$i] " . $data[$i] . "<br/>";
-            }
+            // for ($i = 0; $i < count($data); $i++) {
+            //     echo "[$i] " . $data[$i] . "<br/>";
+            // }
             // 3. Validação de Segurança: Ignora se o ID estiver vazio, nulo ou não for numérico
             if (!isset($data[8]) || trim($data[8]) === '' || !is_numeric(trim($data[8]))) {
                 continue; // Pula cabeçalhos residuais ou linhas em branco no final
@@ -189,9 +189,9 @@ function importarDomicilios($arquivo, $pdo) {
         $linhas = 0;
 
         while (($data = fgetcsv($handle_domicilios, 2000, ";", '"', "\\")) !== FALSE) {
-            for ($i = 0; $i < count($data); $i++) {
-                echo "[$i] " . $data[$i] . "<br/>";
-            }
+            // for ($i = 0; $i < count($data); $i++) {
+            //     echo "[$i] " . $data[$i] . "<br/>";
+            // }
             // 3. Validação de segurança: se o número do selo ou index estiver vazio, pula a linha
             if (!isset($data[31]) || trim($data[31]) === '' || empty($data[32])) {
                 continue; 
@@ -320,9 +320,9 @@ function importarCaracterizacao($arquivo, $pdo) {
         $linhas = 0;
 
         while (($data = fgetcsv($handle_caracterizacao, 4000, ";", '"', "\\")) !== FALSE) {
-            for ($i = 0; $i < count($data); $i++) {
-                echo "[$i] " . $data[$i] . "<br/>";
-            }
+            // for ($i = 0; $i < count($data); $i++) {
+            //     echo "[$i] " . $data[$i] . "<br/>";
+            // }
             // Validação de Segurança: Garante que a linha atual possui o ID numérico do KoboToolbox
             if (!isset($data[132]) || trim($data[132]) === '' || !is_numeric(trim($data[132]))) {
                 continue; // Ignora cabeçalhos residuais ou linhas em branco no fim do arquivo
@@ -478,7 +478,8 @@ function importarCaracterizacao($arquivo, $pdo) {
         //responderJSON(true, "Sucesso! Caracterização Complementar de {$linhas} imóveis adicionada.");
         echo "Sucesso! Caracterização Complementar de {$linhas} imóveis adicionada.";
     }
-    responderJSON(false, "Não foi possível abrir o arquivo enviado.");
+    //responderJSON(false, "Não foi possível abrir o arquivo enviado.");
+    echo "Não foi possível abrir o arquivo enviado.";
 }
 
 function importarSociojuridico($arquivo, $pdo) {
@@ -516,9 +517,9 @@ function importarSociojuridico($arquivo, $pdo) {
         $linhas = 0;
 
         while (($data = fgetcsv($handle_joridico, 4000, ";", '"', "\\")) !== FALSE) {
-            for ($i = 0; $i < count($data); $i++) {
-                echo "[$i] " . $data[$i] . "<br/>";
-            }
+            //for ($i = 0; $i < count($data); $i++) {
+            //    echo "[$i] " . $data[$i] . "<br/>";
+            //}
             // 3. Validação de segurança: se o ID no índice [106] não for numérico, pula (filtra cabeçalhos/linhas vazias)
             if (!isset($data[106]) || trim($data[106]) === '' || !is_numeric(trim($data[106]))) {
                 continue; 
