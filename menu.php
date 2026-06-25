@@ -71,10 +71,23 @@
             <span>Gerenciar Imagens</span>
         </a>
     </li>
-    <!-- Sidebar Toggler (Sidebar) -->
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">  
+    <div class="sidebar-heading">
+        Formulários de coleta
+    </div>
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="gerar_busca_periodo.php">
+            <i class="fa fa-file-excel"></i>
+            <span>Gerar Relatório</span>
+        </a>
+    </li>
+
+        <!-- Sidebar Toggler (Sidebar) --> 
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
-
 </ul>
 <!-- End of Sidebar -->
