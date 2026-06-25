@@ -67,7 +67,7 @@
             <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="gerenciar_arquivos_importacao.php">
-            <i class="fa fa-id-card"></i>
+            <i class="fa fa-file-image"></i>
             <span>Gerenciar Imagens</span>
         </a>
     </li>
