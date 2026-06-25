@@ -15,7 +15,7 @@ and open the template in the editor.
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>GERENTE - Gerenciador de tarefas</title>
+        <title>Relatório por Período</title>
 
         <!-- Custom fonts for this template-->
         <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -51,9 +51,45 @@ and open the template in the editor.
             <!-- Content Wrapper -->
             <div id="content-wrapper" class="d-flex flex-column">
                 <!-- Main Content -->
+                 <?php include './top_bar.php'; ?>
                 <div id="content">
-                    <?php include './top_bar.php'; ?>
-                    
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <div class="card mb-4 border-primay" style="width: 100%; max-width: 45%; margin-right: 25px;">
+                            <div class="row ml-0 card-header py-2 bg-gradient-primary" style="width: 100%;">
+                                <div class="col-sm ml-0" style="max-width:50px;">
+                                </div>
+                                <div class="col mb-0">
+                                    <span style="align:left;" class="h5 m-0 font-weight text-white">Informe os filtros para
+                                        Busca</span>
+                                </div>
+                            </div>
+                        <?php 
+                        
+                        $msg = "";
+                        if (isset($_REQUEST['msg'])) {
+                            $id_msg = $_REQUEST['msg'];
+
+                            if ($id_msg == 1) {
+                                $msg = "SELECIONE UM FILTRO VÁLIDO!";
+                            }
+                        }
+                        ?>
+                            <?php include('./form_busca_periodo.php')?>
+                            <div class="alerta">
+                                <?php if ($msg) {?>
+                                    <div class="alert alert-info fade " role="alert" id="alerta" style="width: 1000px; margin: 20px">
+                                        <?php echo $msg; ?>
+                                    </div>
+                                    <script>
+                                        document.addEventListener("DOMContentLoaded", function () {
+                                            var alerta = document.getElementById("alerta");
+                                            alerta.classList.add("show");
+                                        });
+                                    </script>
+                                    <?php } ?>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- End of Main Content -->
 
